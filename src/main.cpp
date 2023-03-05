@@ -368,7 +368,42 @@ bool bestImprovementSwap(vector<int> &sequencia, vector<vector<Subsequence>> &su
   {
     swap(sequencia[best_i], sequencia[best_j]);
     //ajeitar a matriz
-    UpdateAllSubseq(sequencia, subseq_matrix);
+    int n = dimension + 1;
+
+    
+    swap(subseq_matrix[best_i][best_i], subseq_matrix[best_j][best_j]);
+
+  
+     
+    for (int i = 0; i < n; i++){  
+      for (int j = best_j; j < n; j++){
+        
+        subseq_matrix[i][j] = Subsequence::Concatenate(subseq_matrix[0][i-1], subseq_matrix[j][j]);    
+      }
+    }
+
+    if(best_j < best_i){
+      swap(subseq_matrix[best_j][best_j], subseq_matrix[best_i][best_i]);
+    }
+
+    for (int i = best_j; i < best_i; i++){
+      for (int j = best_j + 1 ; j < best_i + 1; j++){  
+        
+          subseq_matrix[i][j] = Subsequence::Concatenate(subseq_matrix[j][j], subseq_matrix[i][i]);    
+        
+      }
+    }
+  
+
+    for (int i = best_j; i < n; i++){  
+      for (int j = best_j + 1; j < n; j++){
+        
+        subseq_matrix[i][j] = Subsequence::Concatenate(subseq_matrix[j][j], subseq_matrix[dimension][dimension]);    
+      }
+    }
+
+    
+
     // cout << "custo antes da troca: " << custo << endl;
     //custo = custo + bestDelta;
     // cout << "custo apos a troca: " << custo << endl;
@@ -441,7 +476,47 @@ bool bestImprovement2Opt(vector<int> &sequencia, vector<vector<Subsequence>> &su
   if (melhorCusto < subseq_matrix[0][dimension].C)
   {
     reverse(sequencia.begin() + best_i, sequencia.begin() + best_j + 1);
-    UpdateAllSubseq(sequencia, subseq_matrix);
+
+    int j = best_j;
+    for(int i = best_i; i < j; i++){
+      swap(subseq_matrix[i][i], subseq_matrix[j][j]);
+      j--;
+    }
+    
+
+    int n = dimension + 1;
+ 
+    for (int i = 0; i < n; i++){  
+      for (int j = best_j; j < n; j++){
+        
+        subseq_matrix[i][j] = Subsequence::Concatenate(subseq_matrix[0][i-1], subseq_matrix[j][j]);    
+      }
+    }
+
+    if(best_j < best_i){
+     
+      int j = best_j;
+      for(int i = best_i; i < j; i++){
+        swap(subseq_matrix[i][i], subseq_matrix[j][j]);
+        j--;
+      }
+    }
+    
+    for (int i = best_j; i < best_i; i++){
+      for (int j = best_j + 1 ; j < best_i + 1; j++){  
+        
+          subseq_matrix[i][j] = Subsequence::Concatenate(subseq_matrix[j][j], subseq_matrix[i][i]);    
+        
+      }
+    }
+  
+
+    for (int i = best_j; i < n; i++){  
+      for (int j = best_j + 1; j < n; j++){
+        
+        subseq_matrix[i][j] = Subsequence::Concatenate(subseq_matrix[j][j], subseq_matrix[dimension][dimension]);    
+      }
+    }
     // cout << "custo antes do 2opt: " << custo << endl;
     //custo = custo + bestDelta;
     // cout << "custo apos o 2opt: " << custo << endl;
@@ -522,8 +597,41 @@ bool bestImprovementReinsertion(vector<int> &sequencia, vector<vector<Subsequenc
     int reinserir = sequencia[best_i];
     sequencia.erase(sequencia.begin() + best_i);
     sequencia.insert(sequencia.begin() + best_j, reinserir);
-    UpdateAllSubseq(sequencia, subseq_matrix);
+    
+    //executar movimento com as subsequencias
+    int n = dimension + 1;
+ 
+    for (int i = 0; i < n; i++){  
+      for (int j = best_i +  1; j < n; j++){
+        
+        subseq_matrix[i][j] = Subsequence::Concatenate(subseq_matrix[0][i-1], subseq_matrix[i+1][i+1]);    
+      }
+    }
 
+    if(best_j < best_i){
+     //nao sei fazer o movimento com as subsequencias
+      /*int j = best_j;
+      for(int i = best_i; i < j; i++){
+        swap(subseq_matrix[i][i], subseq_matrix[j][j]);
+        j--;
+      }*/
+    }
+    
+    
+    for (int i = best_j; i < best_i; i++){
+      for (int j = best_j + 1 ; j < best_i + 1; j++){  
+        
+          subseq_matrix[i][j] = Subsequence::Concatenate(subseq_matrix[j][j], subseq_matrix[i][i]);    
+        
+      }
+    }
+  
+
+    for (int i = best_i + 1; i < n; i++){  
+      for (int j = best_i; j < n; j++){
+        
+        subseq_matrix[i][j] = Subsequence::Concatenate(subseq_matrix[i+1][j], subseq_matrix[dimension][dimension]);    
+      }
     // cout << "custo antes do reinsertion: " << custo << endl;
     //custo = custo + bestDelta;
     // cout << "custo apos o reinsertion: " << custo << endl;
@@ -580,7 +688,7 @@ bool bestImprovementOrOpt2(vector<int> &sequencia, vector<vector<Subsequence>> &
         if (i < j){
           sigma_1 = Subsequence::Concatenate(subseq_matrix[0][i-1], subseq_matrix[i+2][j + 1]);
           sigma_2 = Subsequence::Concatenate(sigma_1, subseq_matrix[i][i+1]);
-          sigma_3 = Subsequence::Concatenate(sigma_2, subseq_matrix[j+2][dimension-1]);    
+          sigma_3 = Subsequence::Concatenate(sigma_2, subseq_matrix[j+2][dimension]);    
         }else{
           sigma_1 = Subsequence::Concatenate(subseq_matrix[0][j-1], subseq_matrix[i][i+1]);
           sigma_2 = Subsequence::Concatenate(sigma_1, subseq_matrix[j][i-1]);
@@ -669,13 +777,13 @@ bool bestImprovementOrOpt3(vector<int> &sequencia, vector<vector<Subsequence>> &
         copia.insert(copia.begin() + j, &sequencia[i], &sequencia[i] + 3);
         if (i < j)
         {
-          sigma_1 = Subsequence::Concatenate(subseq_matrix[0][i-1], subseq_matrix[i+3][j]);
+          sigma_1 = Subsequence::Concatenate(subseq_matrix[0][i-1], subseq_matrix[i+3][j+2]);
           sigma_2 = Subsequence::Concatenate(sigma_1, subseq_matrix[i][i+2]);
-          sigma_3 = Subsequence::Concatenate(sigma_2, subseq_matrix[j+1][dimension]);      
+          sigma_3 = Subsequence::Concatenate(sigma_2, subseq_matrix[j+3][dimension]);      
         }
         else
         {
-          sigma_1 = Subsequence::Concatenate(subseq_matrix[0][j-1], subseq_matrix[i][i+3]);
+          sigma_1 = Subsequence::Concatenate(subseq_matrix[0][j-1], subseq_matrix[i][i+2]);
           sigma_2 = Subsequence::Concatenate(sigma_1, subseq_matrix[j][i-1]);
           sigma_3 = Subsequence::Concatenate(sigma_2, subseq_matrix[i+3][dimension]);     
         }
@@ -683,7 +791,7 @@ bool bestImprovementOrOpt3(vector<int> &sequencia, vector<vector<Subsequence>> &
 
          custoTeste = custoDaSolucao(copia);
 
-        if(sigma_3.C == custoTeste){
+        if(sigma_3.C != custoTeste){
         cout << "custo acumulado: " << sigma_2.C << endl;
         cout << "custo acumulado pela função: " << custoTeste << endl;
         cout << "i: " << i << "j: " << j << endl;
@@ -959,9 +1067,9 @@ int main(int argc, char **argv)
 
   // bestImprovement2Opt(sequencia, subseq_matrix);
 
-   bestImprovementOrOpt2(sequencia, subseq_matrix);
+  // bestImprovementOrOpt2(sequencia, subseq_matrix);
 
-  // bestImprovementOrOpt3(sequencia, subseq_matrix);
+   bestImprovementOrOpt3(sequencia, subseq_matrix);
 
   // bestImprovementReinsertion(sequencia, subseq_matrix);
 
