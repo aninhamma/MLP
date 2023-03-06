@@ -632,6 +632,7 @@ bool bestImprovementReinsertion(vector<int> &sequencia, vector<vector<Subsequenc
         
         subseq_matrix[i][j] = Subsequence::Concatenate(subseq_matrix[i+1][j], subseq_matrix[dimension][dimension]);    
       }
+    }
     // cout << "custo antes do reinsertion: " << custo << endl;
     //custo = custo + bestDelta;
     // cout << "custo apos o reinsertion: " << custo << endl;
