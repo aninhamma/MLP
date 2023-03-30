@@ -1,0 +1,210 @@
+Valor Medio da Solucao: 209320
+Tempo Medio de Execucao: 0.143519 (s)
+Tempo medio de execucao da SI: 0.0001042 (s)
+Tempo medio de execucao da troca: 0.0201212 (s)
+Tempo medio de execucao do Or-opt: 0.0364436 (s)
+Tempo medio de execucao do Or-opt2: 0.0307272 (s)
+Tempo medio de execucao do Or-opt3: 0.0281034 (s)
+Tempo medio de execucao do 2-opt: 0.0150738 (s)
+Tempo medio de execucao da perturbacao: 0.0005155 (s)
+
+Valor Medio da Solucao: 143721
+Tempo Medio de Execucao: 0.201339 (s)
+Tempo medio de execucao da SI: 0.0001304 (s)
+Tempo medio de execucao da troca: 0.0279794 (s)
+Tempo medio de execucao do Or-opt: 0.0525139 (s)
+Tempo medio de execucao do Or-opt2: 0.0438114 (s)
+Tempo medio de execucao do Or-opt3: 0.0400671 (s)
+Tempo medio de execucao do 2-opt: 0.020614 (s)
+Tempo medio de execucao da perturbacao: 0.000595 (s)
+
+Valor Medio da Solucao: 512361
+Tempo Medio de Execucao: 0.311941 (s)
+Tempo medio de execucao da SI: 0.000158 (s)
+Tempo medio de execucao da troca: 0.0449484 (s)
+Tempo medio de execucao do Or-opt: 0.0804305 (s)
+Tempo medio de execucao do Or-opt2: 0.069398 (s)
+Tempo medio de execucao do Or-opt3: 0.0623906 (s)
+Tempo medio de execucao do 2-opt: 0.0321285 (s)
+Tempo medio de execucao da perturbacao: 0.0007321 (s)
+
+Valor Medio da Solucao: 12528
+Tempo Medio de Execucao: 0.084991 (s)
+Tempo medio de execucao da SI: 8.26e-05 (s)
+Tempo medio de execucao da troca: 0.0114374 (s)
+Tempo medio de execucao do Or-opt: 0.0215897 (s)
+Tempo medio de execucao do Or-opt2: 0.017456 (s)
+Tempo medio de execucao do Or-opt3: 0.0161459 (s)
+Tempo medio de execucao do 2-opt: 0.0091926 (s)
+Tempo medio de execucao da perturbacao: 0.0004176 (s)
+
+Valor Medio da Solucao: 27526.6
+Tempo Medio de Execucao: 3.69246 (s)
+Tempo medio de execucao da SI: 0.00053 (s)
+Tempo medio de execucao da troca: 0.51567 (s)
+Tempo medio de execucao do Or-opt: 1.02396 (s)
+Tempo medio de execucao do Or-opt2: 0.859041 (s)
+Tempo medio de execucao do Or-opt3: 0.780456 (s)
+Tempo medio de execucao do 2-opt: 0.386126 (s)
+Tempo medio de execucao da perturbacao: 0.0019347 (s)
+
+Valor Medio da Solucao: 10222.1
+Tempo Medio de Execucao: 0.218215 (s)
+Tempo medio de execucao da SI: 0.0001226 (s)
+Tempo medio de execucao da troca: 0.0299198 (s)
+Tempo medio de execucao do Or-opt: 0.0595762 (s)
+Tempo medio de execucao do Or-opt2: 0.0468323 (s)
+Tempo medio de execucao do Or-opt3: 0.0428544 (s)
+Tempo medio de execucao do 2-opt: 0.021761 (s)
+Tempo medio de execucao da perturbacao: 0.000616 (s)
+
+Valor Medio da Solucao: 17976
+Tempo Medio de Execucao: 0.897096 (s)
+Tempo medio de execucao da SI: 0.0002823 (s)
+Tempo medio de execucao da troca: 0.127929 (s)
+Tempo medio de execucao do Or-opt: 0.242928 (s)
+Tempo medio de execucao do Or-opt2: 0.202158 (s)
+Tempo medio de execucao do Or-opt3: 0.186886 (s)
+Tempo medio de execucao do 2-opt: 0.0916432 (s)
+Tempo medio de execucao da perturbacao: 0.0010534 (s)
+
+Valor Medio da Solucao: 102378
+Tempo Medio de Execucao: 0.130605 (s)
+Tempo medio de execucao da SI: 0.0001103 (s)
+Tempo medio de execucao da troca: 0.0183561 (s)
+Tempo medio de execucao do Or-opt: 0.0332656 (s)
+Tempo medio de execucao do Or-opt2: 0.0279089 (s)
+Tempo medio de execucao do Or-opt3: 0.0260156 (s)
+Tempo medio de execucao do 2-opt: 0.0132916 (s)
+Tempo medio de execucao da perturbacao: 0.0004662 (s)
+
+Valor Medio da Solucao: 2.09717e+06
+Tempo Medio de Execucao: 2.00557 (s)
+Tempo medio de execucao da SI: 0.0004611 (s)
+Tempo medio de execucao da troca: 0.29919 (s)
+Tempo medio de execucao do Or-opt: 0.525465 (s)
+Tempo medio de execucao do Or-opt2: 0.464448 (s)
+Tempo medio de execucao do Or-opt3: 0.424292 (s)
+Tempo medio de execucao do 2-opt: 0.213322 (s)
+Tempo medio de execucao da perturbacao: 0.0012353 (s)
+
+Valor Medio da Solucao: 247926
+Tempo Medio de Execucao: 0.124823 (s)
+Tempo medio de execucao da SI: 0.0001086 (s)
+Tempo medio de execucao da troca: 0.0176035 (s)
+Tempo medio de execucao do Or-opt: 0.031492 (s)
+Tempo medio de execucao do Or-opt2: 0.0265182 (s)
+Tempo medio de execucao do Or-opt3: 0.0247009 (s)
+Tempo medio de execucao do 2-opt: 0.0128085 (s)
+Tempo medio de execucao da perturbacao: 0.00047 (s)
+
+Valor Medio da Solucao: 983128
+Tempo Medio de Execucao: 2.33055 (s)
+Tempo medio de execucao da SI: 0.0005188 (s)
+Tempo medio de execucao da troca: 0.358619 (s)
+Tempo medio de execucao do Or-opt: 0.609946 (s)
+Tempo medio de execucao do Or-opt2: 0.529434 (s)
+Tempo medio de execucao do Or-opt3: 0.493069 (s)
+Tempo medio de execucao do 2-opt: 0.248976 (s)
+Tempo medio de execucao da perturbacao: 0.0012417 (s)
+
+Valor Medio da Solucao: 986008
+Tempo Medio de Execucao: 2.47651 (s)
+Tempo medio de execucao da SI: 0.0005128 (s)
+Tempo medio de execucao da troca: 0.375995 (s)
+Tempo medio de execucao do Or-opt: 0.644141 (s)
+Tempo medio de execucao do Or-opt2: 0.564942 (s)
+Tempo medio de execucao do Or-opt3: 0.531621 (s)
+Tempo medio de execucao do 2-opt: 0.263856 (s)
+Tempo medio de execucao da perturbacao: 0.0013438 (s)
+
+Valor Medio da Solucao: 961324
+Tempo Medio de Execucao: 2.38761 (s)
+Tempo medio de execucao da SI: 0.0005022 (s)
+Tempo medio de execucao da troca: 0.363971 (s)
+Tempo medio de execucao do Or-opt: 0.635556 (s)
+Tempo medio de execucao do Or-opt2: 0.541176 (s)
+Tempo medio de execucao do Or-opt3: 0.501548 (s)
+Tempo medio de execucao do 2-opt: 0.253009 (s)
+Tempo medio de execucao da perturbacao: 0.0012757 (s)
+
+Valor Medio da Solucao: 976965
+Tempo Medio de Execucao: 2.53884 (s)
+Tempo medio de execucao da SI: 0.0005277 (s)
+Tempo medio de execucao da troca: 0.385901 (s)
+Tempo medio de execucao do Or-opt: 0.667326 (s)
+Tempo medio de execucao do Or-opt2: 0.579725 (s)
+Tempo medio de execucao do Or-opt3: 0.531818 (s)
+Tempo medio de execucao do 2-opt: 0.27282 (s)
+Tempo medio de execucao da perturbacao: 0.0014143 (s)
+
+Valor Medio da Solucao: 971266
+Tempo Medio de Execucao: 2.70614 (s)
+Tempo medio de execucao da SI: 0.0005086 (s)
+Tempo medio de execucao da troca: 0.409293 (s)
+Tempo medio de execucao do Or-opt: 0.710568 (s)
+Tempo medio de execucao do Or-opt2: 0.617762 (s)
+Tempo medio de execucao do Or-opt3: 0.572358 (s)
+Tempo medio de execucao do 2-opt: 0.292953 (s)
+Tempo medio de execucao da perturbacao: 0.0014122 (s)
+
+Valor Medio da Solucao: 603910
+Tempo Medio de Execucao: 2.37363 (s)
+Tempo medio de execucao da SI: 0.0005806 (s)
+Tempo medio de execucao da troca: 0.353156 (s)
+Tempo medio de execucao do Or-opt: 0.626378 (s)
+Tempo medio de execucao do Or-opt2: 0.552932 (s)
+Tempo medio de execucao do Or-opt3: 0.503535 (s)
+Tempo medio de execucao do 2-opt: 0.251845 (s)
+Tempo medio de execucao da perturbacao: 0.0011763 (s)
+
+Valor Medio da Solucao: 2.02663e+06
+Tempo Medio de Execucao: 2.79216 (s)
+Tempo medio de execucao da SI: 0.0005881 (s)
+Tempo medio de execucao da troca: 0.417446 (s)
+Tempo medio de execucao do Or-opt: 0.718692 (s)
+Tempo medio de execucao do Or-opt2: 0.644828 (s)
+Tempo medio de execucao do Or-opt3: 0.612677 (s)
+Tempo medio de execucao do 2-opt: 0.301683 (s)
+Tempo medio de execucao da perturbacao: 0.0013188 (s)
+
+Valor Medio da Solucao: 3.45524e+06
+Tempo Medio de Execucao: 0.745107 (s)
+Tempo medio de execucao da SI: 0.000281 (s)
+Tempo medio de execucao da troca: 0.106177 (s)
+Tempo medio de execucao do Or-opt: 0.189281 (s)
+Tempo medio de execucao do Or-opt2: 0.177494 (s)
+Tempo medio de execucao do Or-opt3: 0.154475 (s)
+Tempo medio de execucao do 2-opt: 0.0781979 (s)
+Tempo medio de execucao da perturbacao: 0.0009097 (s)
+
+Valor Medio da Solucao: 57986
+Tempo Medio de Execucao: 3.02127 (s)
+Tempo medio de execucao da SI: 0.0005188 (s)
+Tempo medio de execucao da troca: 0.4342 (s)
+Tempo medio de execucao do Or-opt: 0.837066 (s)
+Tempo medio de execucao do Or-opt2: 0.689947 (s)
+Tempo medio de execucao do Or-opt3: 0.635454 (s)
+Tempo medio de execucao do 2-opt: 0.312496 (s)
+Tempo medio de execucao da perturbacao: 0.0017168 (s)
+
+Valor Medio da Solucao: 20557
+Tempo Medio de Execucao: 0.568683 (s)
+Tempo medio de execucao da SI: 0.0002407 (s)
+Tempo medio de execucao da troca: 0.0802201 (s)
+Tempo medio de execucao do Or-opt: 0.151935 (s)
+Tempo medio de execucao do Or-opt2: 0.127309 (s)
+Tempo medio de execucao do Or-opt3: 0.120325 (s)
+Tempo medio de execucao do 2-opt: 0.0562692 (s)
+Tempo medio de execucao da perturbacao: 0.000842 (s)
+
+Valor Medio da Solucao: 22327
+Tempo Medio de Execucao: 0.0756088 (s)
+Tempo medio de execucao da SI: 7.9e-05 (s)
+Tempo medio de execucao da troca: 0.0103667 (s)
+Tempo medio de execucao do Or-opt: 0.0191149 (s)
+Tempo medio de execucao do Or-opt2: 0.0160937 (s)
+Tempo medio de execucao do Or-opt3: 0.0141326 (s)
+Tempo medio de execucao do 2-opt: 0.0074974 (s)
+Tempo medio de execucao da perturbacao: 0.000382 (s)
+

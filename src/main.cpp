@@ -244,9 +244,9 @@ vector<int> construcao(double alpha)
 
     sequencia.push_back(1);
 
-   cout << "Solucao inicial: " << endl;
+   //cout << "Solucao inicial: " << endl;
 
-   printSolucao(sequencia);
+   //printSolucao(sequencia);
 
   double fimConstruction = cpuTime();
   tempo_construction += (fimConstruction - inicioconstruction);
@@ -314,8 +314,8 @@ bool bestImprovementSwap(vector<int> &sequencia, vector<vector<Subsequence>> &su
   double melhorCusto = subseq_matrix[0][dimension].C;
   int tamanho = dimension + 1;
   Subsequence sigma_1, sigma_2, sigma_3, last_sigma;
-  vector<int> copia = sequencia;
-  double custoTeste;
+  //vector<int> copia = sequencia;
+  //double custoTeste;
   
 
   int best_i = 0, best_j = 0;
@@ -323,7 +323,7 @@ bool bestImprovementSwap(vector<int> &sequencia, vector<vector<Subsequence>> &su
   {
     for (int j = i + 1; j < tamanho - 1; j++)
     {
-    swap(copia[i], copia[j]);
+    //swap(copia[i], copia[j]);
 
       if (j == i + 1)
       { // para quando as cidades trocadas forem vizinhas
@@ -339,18 +339,18 @@ bool bestImprovementSwap(vector<int> &sequencia, vector<vector<Subsequence>> &su
       }
 
       
-      custoTeste = custoDaSolucao(copia);
+      //custoTeste = custoDaSolucao(copia);
 
-      if(last_sigma.C != custoTeste){
+      /*if(last_sigma.C != custoTeste){
         cout << "custo acumulado: " << last_sigma.C << endl;
         cout << "custo acumulado pela função: " << custoTeste << endl;
         cout << "i: " << i << "j: " << j << endl;
-      }
+      }*/
 
       //cout << "custo acumulado: " << last_sigma.C << endl;
       //cout << "custo acumulado pela função: " << 
 
-      copia = sequencia;
+      //copia = sequencia;
 
     
 
@@ -369,7 +369,10 @@ bool bestImprovementSwap(vector<int> &sequencia, vector<vector<Subsequence>> &su
     swap(sequencia[best_i], sequencia[best_j]);
 
     custo = melhorCusto;
-    //ajeitar a matriz
+
+    //UpdateAllSubseq(sequencia, subseq_matrix);
+    
+    
     int n = dimension + 1;
 
     
@@ -433,13 +436,13 @@ bool bestImprovement2Opt(vector<int> &sequencia, vector<vector<Subsequence>> &su
   double melhorCusto = subseq_matrix[0][dimension].C;
   int tamanho = dimension + 1;
   Subsequence sigma_1, sigma_2;
-  vector<int> copia = sequencia;
-  double custoTeste;
+  //vector<int> copia = sequencia;
+  //double custoTeste;
 
   int best_i = 0, best_j = 0;
   for (int i = 1; i < tamanho - 1; i++){
     for (int j = i + 1; j < tamanho - 1; j++){
-      reverse(copia.begin() + i, copia.begin() + j + 1);
+      //reverse(copia.begin() + i, copia.begin() + j + 1);
       sigma_1 = Subsequence::Concatenate(subseq_matrix[0][i-1], subseq_matrix[j][i]);
       sigma_2 = Subsequence::Concatenate(sigma_1, subseq_matrix[j+1][dimension]);
 
@@ -454,15 +457,15 @@ bool bestImprovement2Opt(vector<int> &sequencia, vector<vector<Subsequence>> &su
 
       //copia = sequencia;
 
-      custoTeste = custoDaSolucao(copia);
+      //custoTeste = custoDaSolucao(copia);
 
-      if(sigma_2.C != custoTeste){
+      /*if(sigma_2.C != custoTeste){
         cout << "custo acumulado: " << sigma_2.C << endl;
         cout << "custo acumulado pela função: " << custoTeste << endl;
         cout << "i: " << i << "j: " << j << endl;
-      }
+      }*/
 
-      copia = sequencia;
+      //copia = sequencia;
 
       if (sigma_2.C < melhorCusto)
       {
@@ -478,6 +481,8 @@ bool bestImprovement2Opt(vector<int> &sequencia, vector<vector<Subsequence>> &su
     reverse(sequencia.begin() + best_i, sequencia.begin() + best_j + 1);
 
     custo = melhorCusto;
+
+    //UpdateAllSubseq(sequencia, subseq_matrix);
 
     int n = dimension + 1;
 
@@ -538,18 +543,18 @@ bool bestImprovementReinsertion(vector<int> &sequencia, vector<vector<Subsequenc
 {
   double inicioreinsertion = cpuTime();
   double melhorCusto = subseq_matrix[0][dimension].C;
-  vector<int> copia = sequencia;
+  //vector<int> copia = sequencia;
   int tamanho = dimension + 1;
   Subsequence sigma_1, sigma_2, sigma_3;
-  double custoTeste;
+  //double custoTeste;
 
   int best_i = 0, best_j = 0;
   for (int i = 1; i < tamanho - 1; i++){
     for (int j = 1; j < tamanho - 1; j++){
 
       if (i != j){
-        copia.erase(copia.begin() + i);
-        copia.insert(copia.begin() + j, sequencia[i]);
+        /*copia.erase(copia.begin() + i);
+        copia.insert(copia.begin() + j, sequencia[i]);*/
         if (i < j)
         {
           sigma_1 = Subsequence::Concatenate(subseq_matrix[0][i-1], subseq_matrix[i+1][j]);
@@ -563,15 +568,15 @@ bool bestImprovementReinsertion(vector<int> &sequencia, vector<vector<Subsequenc
           sigma_3 = Subsequence::Concatenate(sigma_2, subseq_matrix[i+1][dimension]);  
         }
         // delta = calculateReinsertionCost(i, j, sequencia);
-        custoTeste = custoDaSolucao(copia);
+        //custoTeste = custoDaSolucao(copia);
 
-        if(sigma_3.C != custoTeste){
+        /*if(sigma_3.C != custoTeste){
         cout << "custo acumulado: " << sigma_3.C << endl;
         cout << "custo acumulado pela função: " << custoTeste << endl;
         cout << "i: " << i << "j: " << j << endl;
-        }
+        }*/
 
-        copia = sequencia;
+        //copia = sequencia;
 
         if (sigma_3.C < melhorCusto)
         {
@@ -657,7 +662,7 @@ bool bestImprovementOrOpt2(vector<int> &sequencia, vector<vector<Subsequence>> &
   double inicioOropt2 = cpuTime();
   double melhorCusto = subseq_matrix[0][dimension].C;
   double custoTeste;
-  vector<int> copia = sequencia;
+  //vector<int> copia = sequencia;
   int tamanho = dimension + 1;
   Subsequence sigma_1, sigma_2, sigma_3;
   
@@ -672,9 +677,9 @@ bool bestImprovementOrOpt2(vector<int> &sequencia, vector<vector<Subsequence>> &
         //cout << "copia antes da modificação: ";
         //printSolucao(copia);
          
-        vector<int> reinserir(sequencia.begin() + i, sequencia.begin() + i + 2);
+        /*vector<int> reinserir(sequencia.begin() + i, sequencia.begin() + i + 2);
         copia.erase(copia.begin() + i, copia.begin() + i + 2);
-        copia.insert(copia.begin() + j, reinserir.begin(), reinserir.end());
+        copia.insert(copia.begin() + j, reinserir.begin(), reinserir.end());*/
         
         //cout << "copia depois da modificação: ";
         //printSolucao(copia); 
@@ -692,17 +697,17 @@ bool bestImprovementOrOpt2(vector<int> &sequencia, vector<vector<Subsequence>> &
         
         //cout << "copia antes do custo teste: ";
         //printSolucao(copia);
-        custoTeste = custoDaSolucao(copia);
+        //custoTeste = custoDaSolucao(copia);
 
-        copia = sequencia; 
+        //copia = sequencia; 
         //cout << "copia apos receber sequencia: ";
         //printSolucao(copia);
 
-        if(sigma_3.C != custoTeste){
+        /*if(sigma_3.C != custoTeste){
         cout << "custo acumulado: " << sigma_3.C << endl;
         cout << "custo acumulado pela função: " << custoTeste << endl;
         cout << "i: " << i << "j: " << j << endl;
-        }
+        }*/
 
         // cout << "Antes da copia" << endl;
          //copia = sequencia;
@@ -726,7 +731,9 @@ bool bestImprovementOrOpt2(vector<int> &sequencia, vector<vector<Subsequence>> &
 
     melhorCusto = custo; 
 
-    int n = dimension + 1; 
+    //UpdateAllSubseq(sequencia, subseq_matrix);
+
+   int n = dimension + 1; 
 
     if(best_i > best_j){
       swap(best_i, best_j);
@@ -792,10 +799,10 @@ bool bestImprovementOrOpt3(vector<int> &sequencia, vector<vector<Subsequence>> &
 {
   double inicioOropt3 = cpuTime();
   double melhorCusto = subseq_matrix[0][dimension].C;
-  vector<int> copia = sequencia;
+  //vector<int> copia = sequencia;
   int tamanho = dimension + 1;
   Subsequence sigma_1, sigma_2, sigma_3;
-  double custoTeste;
+  //double custoTeste;
 
   int best_i = 0, best_j = 0;
   //cout << "inicio" << endl;
@@ -804,8 +811,8 @@ bool bestImprovementOrOpt3(vector<int> &sequencia, vector<vector<Subsequence>> &
 
       if (i != j)
       {
-        copia.erase(copia.begin() + i, copia.begin() + i + 3);
-        copia.insert(copia.begin() + j, &sequencia[i], &sequencia[i] + 3);
+        /*copia.erase(copia.begin() + i, copia.begin() + i + 3);
+        copia.insert(copia.begin() + j, &sequencia[i], &sequencia[i] + 3);*/
         if (i < j)
         {
           sigma_1 = Subsequence::Concatenate(subseq_matrix[0][i-1], subseq_matrix[i+3][j+2]);
@@ -820,15 +827,15 @@ bool bestImprovementOrOpt3(vector<int> &sequencia, vector<vector<Subsequence>> &
         }
         // delta = calculateOrOpt3Cost(i, j, sequencia);
 
-         custoTeste = custoDaSolucao(copia);
+         //custoTeste = custoDaSolucao(copia);
 
-        if(sigma_3.C != custoTeste){
+        /*if(sigma_3.C != custoTeste){
         cout << "custo acumulado: " << sigma_2.C << endl;
         cout << "custo acumulado pela função: " << custoTeste << endl;
         cout << "i: " << i << "j: " << j << endl;
-        }
+        }*/
 
-         copia = sequencia;
+         //copia = sequencia;
 
         if (sigma_3.C < melhorCusto)
         {
@@ -853,7 +860,7 @@ bool bestImprovementOrOpt3(vector<int> &sequencia, vector<vector<Subsequence>> &
     int n = dimension + 1;
 
     if(best_i > best_j){
-      swap(sequencia[best_i], sequencia[best_j]);
+      swap(best_i, best_j);
     }
 
     for (int i = best_i; i <= best_j+2; i++)
@@ -877,7 +884,7 @@ bool bestImprovementOrOpt3(vector<int> &sequencia, vector<vector<Subsequence>> &
 
     
 
-    for (int i = best_i; i <= best_j+1; i++){  
+    for (int i = best_i; i <= best_j+2; i++){  
       for (int j = i + 1; j < n; j++){
         
         subseq_matrix[i][j] = Subsequence::Concatenate(subseq_matrix[i][j - 1], subseq_matrix[j][j]); 
@@ -1061,7 +1068,7 @@ int main(int argc, char **argv)
 {
 
   readData(argc, argv, &dimension, &matrizAdj);
-  printData();
+  //printData();
 
   double somaTempos = 0;
   double somaValores = 0;
@@ -1118,8 +1125,8 @@ int main(int argc, char **argv)
     solucaoFinal = solucaoIteracao;
   }
 
-  cout << "solucao best of all: " << endl;
-  printSolucao(solucaoFinal);
+  //cout << "solucao best of all: " << endl;
+  //printSolucao(solucaoFinal);
   // custoBestOfAll = custoDaSolucao(bestOfAll);
   // cout << "Custo best of all: " << valorTotal << endl;
 
